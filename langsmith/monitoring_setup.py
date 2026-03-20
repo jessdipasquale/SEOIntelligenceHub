@@ -17,7 +17,7 @@ import os
 import json
 from dotenv import load_dotenv
 from langsmith import Client
-from langsmith.evaluation import evaluate, LangChainStringEvaluator
+from langsmith.evaluation import evaluate
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import HumanMessage
 
