@@ -5,8 +5,3 @@
   {"keyword": "content marketing strategy", "client": "ClientB"},
   {"keyword": "keyword research tool", "client": "ClientC"}
 ]
-```
-
-Clicca **Commit changes**. Poi torna su n8n e aggiorna l'URL con:
-```
-https://raw.githubusercontent.com/jessdipasquale/SEOIntelligenceHub/main/keywords_watchlist.json
