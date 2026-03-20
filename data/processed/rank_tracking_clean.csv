@@ -1,0 +1,241 @@
+keyword,rank,domain,date,topic,country,prev_rank,rank_change,rank_drop
+ai blog writer,8,neuroflash.com,2023-01-01,ai_generators,us,,,False
+ai blog writer,8,neuroflash.com,2023-01-08,ai_generators,us,8.0,0.0,False
+ai blog writer,6,peppertype.ai,2023-01-15,ai_generators,us,8.0,2.0,False
+ai blog writer,4,anyword.com,2023-01-22,ai_generators,us,6.0,2.0,False
+ai blog writer,4,anyword.com,2023-01-29,ai_generators,us,4.0,0.0,False
+ai blog writer,4,anyword.com,2023-02-05,ai_generators,us,4.0,0.0,False
+ai blog writer,2,writesonic.com,2023-02-12,ai_generators,us,4.0,2.0,False
+ai blog writer,2,writesonic.com,2023-02-19,ai_generators,us,2.0,0.0,False
+ai content generator,10,jasper.ai,2023-01-01,ai_generators,us,,,False
+ai content generator,7,contentatscale.ai,2023-01-08,ai_generators,us,10.0,3.0,False
+ai content generator,5,hypotenuse.ai,2023-01-15,ai_generators,us,7.0,2.0,False
+ai content generator,5,hypotenuse.ai,2023-01-22,ai_generators,us,5.0,0.0,False
+ai content generator,3,rytr.me,2023-01-29,ai_generators,us,5.0,2.0,False
+ai content generator,1,copy.ai,2023-02-05,ai_generators,us,3.0,2.0,False
+ai content generator,1,copy.ai,2023-02-12,ai_generators,us,1.0,0.0,False
+ai content generator,8,neuroflash.com,2023-02-19,ai_generators,us,1.0,-7.0,True
+ai copywriter,6,peppertype.ai,2023-01-01,ai_generators,us,,,False
+ai copywriter,4,anyword.com,2023-01-08,ai_generators,us,6.0,2.0,False
+ai copywriter,3,rytr.me,2023-01-15,ai_generators,us,4.0,1.0,False
+ai copywriter,1,copy.ai,2023-01-22,ai_generators,us,3.0,2.0,False
+ai copywriter,1,copy.ai,2023-01-29,ai_generators,us,1.0,0.0,False
+ai copywriter,1,copy.ai,2023-02-05,ai_generators,us,1.0,0.0,False
+ai copywriter,1,copy.ai,2023-02-12,ai_generators,us,1.0,0.0,False
+ai copywriter,8,neuroflash.com,2023-02-19,ai_generators,us,1.0,-7.0,True
+ai text generator,4,anyword.com,2023-01-01,ai_generators,us,,,False
+ai text generator,2,writesonic.com,2023-01-08,ai_generators,us,4.0,2.0,False
+ai text generator,2,writesonic.com,2023-01-15,ai_generators,us,2.0,0.0,False
+ai text generator,1,copy.ai,2023-01-22,ai_generators,us,2.0,1.0,False
+ai text generator,7,contentatscale.ai,2023-01-29,ai_generators,us,1.0,-6.0,True
+ai text generator,9,simplified.com,2023-02-05,ai_generators,us,7.0,-2.0,False
+ai text generator,8,neuroflash.com,2023-02-12,ai_generators,us,9.0,1.0,False
+ai text generator,6,peppertype.ai,2023-02-19,ai_generators,us,8.0,2.0,False
+ai writing tool,4,anyword.com,2023-01-01,ai_generators,us,,,False
+ai writing tool,2,writesonic.com,2023-01-08,ai_generators,us,4.0,2.0,False
+ai writing tool,1,copy.ai,2023-01-15,ai_generators,us,2.0,1.0,False
+ai writing tool,1,copy.ai,2023-01-22,ai_generators,us,1.0,0.0,False
+ai writing tool,1,copy.ai,2023-01-29,ai_generators,us,1.0,0.0,False
+ai writing tool,1,copy.ai,2023-02-05,ai_generators,us,1.0,0.0,False
+ai writing tool,1,copy.ai,2023-02-12,ai_generators,us,1.0,0.0,False
+ai writing tool,1,copy.ai,2023-02-19,ai_generators,us,1.0,0.0,False
+babbel review,1,babbel.com,2023-01-01,language_learning,us,,,False
+babbel review,1,babbel.com,2023-01-08,language_learning,us,1.0,0.0,False
+babbel review,4,busuu.com,2023-01-15,language_learning,us,1.0,-3.0,False
+babbel review,2,rosettastone.com,2023-01-22,language_learning,us,4.0,2.0,False
+babbel review,2,rosettastone.com,2023-01-29,language_learning,us,2.0,0.0,False
+babbel review,7,languagetransfer.org,2023-02-05,language_learning,us,2.0,-5.0,True
+babbel review,6,lingoda.com,2023-02-12,language_learning,us,7.0,1.0,False
+babbel review,7,languagetransfer.org,2023-02-19,language_learning,us,6.0,-1.0,False
+bad credit loan,1,nerdwallet.com,2023-01-01,loans,us,,,False
+bad credit loan,1,nerdwallet.com,2023-01-08,loans,us,1.0,0.0,False
+bad credit loan,1,nerdwallet.com,2023-01-15,loans,us,1.0,0.0,False
+bad credit loan,1,nerdwallet.com,2023-01-22,loans,us,1.0,0.0,False
+bad credit loan,1,nerdwallet.com,2023-01-29,loans,us,1.0,0.0,False
+bad credit loan,1,nerdwallet.com,2023-02-05,loans,us,1.0,0.0,False
+bad credit loan,1,nerdwallet.com,2023-02-12,loans,us,1.0,0.0,False
+bad credit loan,1,nerdwallet.com,2023-02-19,loans,us,1.0,0.0,False
+best ai writer,11,copy.ai,2023-01-01,ai_generators,us,,,False
+best ai writer,11,copy.ai,2023-01-08,ai_generators,us,11.0,0.0,False
+best ai writer,8,neuroflash.com,2023-01-15,ai_generators,us,11.0,3.0,False
+best ai writer,6,peppertype.ai,2023-01-22,ai_generators,us,8.0,2.0,False
+best ai writer,11,copy.ai,2023-01-29,ai_generators,us,6.0,-5.0,True
+best ai writer,10,jasper.ai,2023-02-05,ai_generators,us,11.0,1.0,False
+best ai writer,10,jasper.ai,2023-02-12,ai_generators,us,10.0,0.0,False
+best ai writer,8,neuroflash.com,2023-02-19,ai_generators,us,10.0,2.0,False
+best language app,4,busuu.com,2023-01-01,language_learning,us,,,False
+best language app,2,rosettastone.com,2023-01-08,language_learning,us,4.0,2.0,False
+best language app,1,babbel.com,2023-01-15,language_learning,us,2.0,1.0,False
+best language app,1,babbel.com,2023-01-22,language_learning,us,1.0,0.0,False
+best language app,1,babbel.com,2023-01-29,language_learning,us,1.0,0.0,False
+best language app,2,rosettastone.com,2023-02-05,language_learning,us,1.0,-1.0,False
+best language app,2,rosettastone.com,2023-02-12,language_learning,us,2.0,0.0,False
+best language app,1,babbel.com,2023-02-19,language_learning,us,2.0,1.0,False
+best personal loan,2,lendingtree.com,2023-01-01,loans,us,,,False
+best personal loan,2,lendingtree.com,2023-01-08,loans,us,2.0,0.0,False
+best personal loan,1,nerdwallet.com,2023-01-15,loans,us,2.0,1.0,False
+best personal loan,1,nerdwallet.com,2023-01-22,loans,us,1.0,0.0,False
+best personal loan,6,discover.com,2023-01-29,loans,us,1.0,-5.0,True
+best personal loan,4,marcus.com,2023-02-05,loans,us,6.0,2.0,False
+best personal loan,3,sofi.com,2023-02-12,loans,us,4.0,1.0,False
+best personal loan,5,lightstream.com,2023-02-19,loans,us,3.0,-2.0,False
+chatgpt alternative,7,contentatscale.ai,2023-01-01,ai_generators,us,,,False
+chatgpt alternative,6,peppertype.ai,2023-01-08,ai_generators,us,7.0,1.0,False
+chatgpt alternative,4,anyword.com,2023-01-15,ai_generators,us,6.0,2.0,False
+chatgpt alternative,3,rytr.me,2023-01-22,ai_generators,us,4.0,1.0,False
+chatgpt alternative,1,copy.ai,2023-01-29,ai_generators,us,3.0,2.0,False
+chatgpt alternative,1,copy.ai,2023-02-05,ai_generators,us,1.0,0.0,False
+chatgpt alternative,3,rytr.me,2023-02-12,ai_generators,us,1.0,-2.0,False
+chatgpt alternative,2,writesonic.com,2023-02-19,ai_generators,us,3.0,1.0,False
+compare loans,5,lightstream.com,2023-01-01,loans,us,,,False
+compare loans,7,prosper.com,2023-01-08,loans,us,5.0,-2.0,False
+compare loans,7,prosper.com,2023-01-15,loans,us,7.0,0.0,False
+compare loans,6,discover.com,2023-01-22,loans,us,7.0,1.0,False
+compare loans,3,sofi.com,2023-01-29,loans,us,6.0,3.0,False
+compare loans,10,bankrate.com,2023-02-05,loans,us,3.0,-7.0,True
+compare loans,7,prosper.com,2023-02-12,loans,us,10.0,3.0,False
+compare loans,14,marcus.com,2023-02-19,loans,us,7.0,-7.0,True
+copy ai,10,jasper.ai,2023-01-01,ai_generators,us,,,False
+copy ai,9,simplified.com,2023-01-08,ai_generators,us,10.0,1.0,False
+copy ai,6,peppertype.ai,2023-01-15,ai_generators,us,9.0,3.0,False
+copy ai,4,anyword.com,2023-01-22,ai_generators,us,6.0,2.0,False
+copy ai,4,anyword.com,2023-01-29,ai_generators,us,4.0,0.0,False
+copy ai,2,writesonic.com,2023-02-05,ai_generators,us,4.0,2.0,False
+copy ai,1,copy.ai,2023-02-12,ai_generators,us,2.0,1.0,False
+copy ai,8,neuroflash.com,2023-02-19,ai_generators,us,1.0,-7.0,True
+debt consolidation loan,12,lendingtree.com,2023-01-01,loans,us,,,False
+debt consolidation loan,18,upstart.com,2023-01-08,loans,us,12.0,-6.0,True
+debt consolidation loan,15,lightstream.com,2023-01-15,loans,us,18.0,3.0,False
+debt consolidation loan,12,lendingtree.com,2023-01-22,loans,us,15.0,3.0,False
+debt consolidation loan,11,nerdwallet.com,2023-01-29,loans,us,12.0,1.0,False
+debt consolidation loan,9,lendingclub.com,2023-02-05,loans,us,11.0,2.0,False
+debt consolidation loan,7,prosper.com,2023-02-12,loans,us,9.0,2.0,False
+debt consolidation loan,5,lightstream.com,2023-02-19,loans,us,7.0,2.0,False
+duolingo alternative,1,babbel.com,2023-01-01,language_learning,us,,,False
+duolingo alternative,1,babbel.com,2023-01-08,language_learning,us,1.0,0.0,False
+duolingo alternative,1,babbel.com,2023-01-15,language_learning,us,1.0,0.0,False
+duolingo alternative,1,babbel.com,2023-01-22,language_learning,us,1.0,0.0,False
+duolingo alternative,1,babbel.com,2023-01-29,language_learning,us,1.0,0.0,False
+duolingo alternative,1,babbel.com,2023-02-05,language_learning,us,1.0,0.0,False
+duolingo alternative,5,italki.com,2023-02-12,language_learning,us,1.0,-4.0,True
+duolingo alternative,2,rosettastone.com,2023-02-19,language_learning,us,5.0,3.0,False
+fast personal loan,3,sofi.com,2023-01-01,loans,us,,,False
+fast personal loan,10,bankrate.com,2023-01-08,loans,us,3.0,-7.0,True
+fast personal loan,11,nerdwallet.com,2023-01-15,loans,us,10.0,-1.0,False
+fast personal loan,9,lendingclub.com,2023-01-22,loans,us,11.0,2.0,False
+fast personal loan,9,lendingclub.com,2023-01-29,loans,us,9.0,0.0,False
+fast personal loan,16,discover.com,2023-02-05,loans,us,9.0,-7.0,True
+fast personal loan,13,sofi.com,2023-02-12,loans,us,16.0,3.0,False
+fast personal loan,15,lightstream.com,2023-02-19,loans,us,13.0,-2.0,False
+free ai generator,1,copy.ai,2023-01-01,ai_generators,us,,,False
+free ai generator,2,writesonic.com,2023-01-08,ai_generators,us,1.0,-1.0,False
+free ai generator,1,copy.ai,2023-01-15,ai_generators,us,2.0,1.0,False
+free ai generator,2,writesonic.com,2023-01-22,ai_generators,us,1.0,-1.0,False
+free ai generator,7,contentatscale.ai,2023-01-29,ai_generators,us,2.0,-5.0,True
+free ai generator,7,contentatscale.ai,2023-02-05,ai_generators,us,7.0,0.0,False
+free ai generator,9,simplified.com,2023-02-12,ai_generators,us,7.0,-2.0,False
+free ai generator,9,simplified.com,2023-02-19,ai_generators,us,9.0,0.0,False
+instant loan approval,10,bankrate.com,2023-01-01,loans,us,,,False
+instant loan approval,17,prosper.com,2023-01-08,loans,us,10.0,-7.0,True
+instant loan approval,15,lightstream.com,2023-01-15,loans,us,17.0,2.0,False
+instant loan approval,18,upstart.com,2023-01-22,loans,us,15.0,-3.0,False
+instant loan approval,20,bankrate.com,2023-01-29,loans,us,18.0,-2.0,False
+instant loan approval,20,bankrate.com,2023-02-05,loans,us,20.0,0.0,False
+instant loan approval,20,bankrate.com,2023-02-12,loans,us,20.0,0.0,False
+instant loan approval,19,lendingclub.com,2023-02-19,loans,us,20.0,1.0,False
+jasper ai,2,writesonic.com,2023-01-01,ai_generators,us,,,False
+jasper ai,1,copy.ai,2023-01-08,ai_generators,us,2.0,1.0,False
+jasper ai,1,copy.ai,2023-01-15,ai_generators,us,1.0,0.0,False
+jasper ai,1,copy.ai,2023-01-22,ai_generators,us,1.0,0.0,False
+jasper ai,3,rytr.me,2023-01-29,ai_generators,us,1.0,-2.0,False
+jasper ai,1,copy.ai,2023-02-05,ai_generators,us,3.0,2.0,False
+jasper ai,1,copy.ai,2023-02-12,ai_generators,us,1.0,0.0,False
+jasper ai,1,copy.ai,2023-02-19,ai_generators,us,1.0,0.0,False
+language learning app,1,babbel.com,2023-01-01,language_learning,us,,,False
+language learning app,1,babbel.com,2023-01-08,language_learning,us,1.0,0.0,False
+language learning app,1,babbel.com,2023-01-15,language_learning,us,1.0,0.0,False
+language learning app,1,babbel.com,2023-01-22,language_learning,us,1.0,0.0,False
+language learning app,1,babbel.com,2023-01-29,language_learning,us,1.0,0.0,False
+language learning app,1,babbel.com,2023-02-05,language_learning,us,1.0,0.0,False
+language learning app,1,babbel.com,2023-02-12,language_learning,us,1.0,0.0,False
+language learning app,1,babbel.com,2023-02-19,language_learning,us,1.0,0.0,False
+learn french fast,9,lingvist.com,2023-01-01,language_learning,us,,,False
+learn french fast,12,rosettastone.com,2023-01-08,language_learning,us,9.0,-3.0,False
+learn french fast,11,babbel.com,2023-01-15,language_learning,us,12.0,1.0,False
+learn french fast,18,clozemaster.com,2023-01-22,language_learning,us,11.0,-7.0,True
+learn french fast,16,lingoda.com,2023-01-29,language_learning,us,18.0,2.0,False
+learn french fast,20,duolingo.com,2023-02-05,language_learning,us,16.0,-4.0,True
+learn french fast,20,duolingo.com,2023-02-12,language_learning,us,20.0,0.0,False
+learn french fast,20,duolingo.com,2023-02-19,language_learning,us,20.0,0.0,False
+learn japanese,6,lingoda.com,2023-01-01,language_learning,us,,,False
+learn japanese,10,duolingo.com,2023-01-08,language_learning,us,6.0,-4.0,True
+learn japanese,10,duolingo.com,2023-01-15,language_learning,us,10.0,0.0,False
+learn japanese,8,clozemaster.com,2023-01-22,language_learning,us,10.0,2.0,False
+learn japanese,6,lingoda.com,2023-01-29,language_learning,us,8.0,2.0,False
+learn japanese,3,pimsleur.com,2023-02-05,language_learning,us,6.0,3.0,False
+learn japanese,1,babbel.com,2023-02-12,language_learning,us,3.0,2.0,False
+learn japanese,1,babbel.com,2023-02-19,language_learning,us,1.0,0.0,False
+learn mandarin,5,italki.com,2023-01-01,language_learning,us,,,False
+learn mandarin,2,rosettastone.com,2023-01-08,language_learning,us,5.0,3.0,False
+learn mandarin,2,rosettastone.com,2023-01-15,language_learning,us,2.0,0.0,False
+learn mandarin,1,babbel.com,2023-01-22,language_learning,us,2.0,1.0,False
+learn mandarin,2,rosettastone.com,2023-01-29,language_learning,us,1.0,-1.0,False
+learn mandarin,2,rosettastone.com,2023-02-05,language_learning,us,2.0,0.0,False
+learn mandarin,1,babbel.com,2023-02-12,language_learning,us,2.0,1.0,False
+learn mandarin,1,babbel.com,2023-02-19,language_learning,us,1.0,0.0,False
+learn spanish online,5,italki.com,2023-01-01,language_learning,us,,,False
+learn spanish online,3,pimsleur.com,2023-01-08,language_learning,us,5.0,2.0,False
+learn spanish online,2,rosettastone.com,2023-01-15,language_learning,us,3.0,1.0,False
+learn spanish online,1,babbel.com,2023-01-22,language_learning,us,2.0,1.0,False
+learn spanish online,1,babbel.com,2023-01-29,language_learning,us,1.0,0.0,False
+learn spanish online,1,babbel.com,2023-02-05,language_learning,us,1.0,0.0,False
+learn spanish online,1,babbel.com,2023-02-12,language_learning,us,1.0,0.0,False
+learn spanish online,8,clozemaster.com,2023-02-19,language_learning,us,1.0,-7.0,True
+loan calculator,1,nerdwallet.com,2023-01-01,loans,us,,,False
+loan calculator,4,marcus.com,2023-01-08,loans,us,1.0,-3.0,False
+loan calculator,10,bankrate.com,2023-01-15,loans,us,4.0,-6.0,True
+loan calculator,12,lendingtree.com,2023-01-22,loans,us,10.0,-2.0,False
+loan calculator,10,bankrate.com,2023-01-29,loans,us,12.0,2.0,False
+loan calculator,10,bankrate.com,2023-02-05,loans,us,10.0,0.0,False
+loan calculator,8,upstart.com,2023-02-12,loans,us,10.0,2.0,False
+loan calculator,8,upstart.com,2023-02-19,loans,us,8.0,0.0,False
+loan refinancing,1,nerdwallet.com,2023-01-01,loans,us,,,False
+loan refinancing,3,sofi.com,2023-01-08,loans,us,1.0,-2.0,False
+loan refinancing,3,sofi.com,2023-01-15,loans,us,3.0,0.0,False
+loan refinancing,1,nerdwallet.com,2023-01-22,loans,us,3.0,2.0,False
+loan refinancing,8,upstart.com,2023-01-29,loans,us,1.0,-7.0,True
+loan refinancing,7,prosper.com,2023-02-05,loans,us,8.0,1.0,False
+loan refinancing,5,lightstream.com,2023-02-12,loans,us,7.0,2.0,False
+loan refinancing,2,lendingtree.com,2023-02-19,loans,us,5.0,3.0,False
+low interest loan,2,lendingtree.com,2023-01-01,loans,us,,,False
+low interest loan,1,nerdwallet.com,2023-01-08,loans,us,2.0,1.0,False
+low interest loan,1,nerdwallet.com,2023-01-15,loans,us,1.0,0.0,False
+low interest loan,1,nerdwallet.com,2023-01-22,loans,us,1.0,0.0,False
+low interest loan,1,nerdwallet.com,2023-01-29,loans,us,1.0,0.0,False
+low interest loan,1,nerdwallet.com,2023-02-05,loans,us,1.0,0.0,False
+low interest loan,6,discover.com,2023-02-12,loans,us,1.0,-5.0,True
+low interest loan,4,marcus.com,2023-02-19,loans,us,6.0,2.0,False
+online language course,9,lingvist.com,2023-01-01,language_learning,us,,,False
+online language course,6,lingoda.com,2023-01-08,language_learning,us,9.0,3.0,False
+online language course,8,clozemaster.com,2023-01-15,language_learning,us,6.0,-2.0,False
+online language course,11,babbel.com,2023-01-22,language_learning,us,8.0,-3.0,False
+online language course,18,clozemaster.com,2023-01-29,language_learning,us,11.0,-7.0,True
+online language course,20,duolingo.com,2023-02-05,language_learning,us,18.0,-2.0,False
+online language course,19,lingvist.com,2023-02-12,language_learning,us,20.0,1.0,False
+online language course,20,duolingo.com,2023-02-19,language_learning,us,19.0,-1.0,False
+online loan application,7,prosper.com,2023-01-01,loans,us,,,False
+online loan application,5,lightstream.com,2023-01-08,loans,us,7.0,2.0,False
+online loan application,4,marcus.com,2023-01-15,loans,us,5.0,1.0,False
+online loan application,5,lightstream.com,2023-01-22,loans,us,4.0,-1.0,False
+online loan application,2,lendingtree.com,2023-01-29,loans,us,5.0,3.0,False
+online loan application,1,nerdwallet.com,2023-02-05,loans,us,2.0,1.0,False
+online loan application,1,nerdwallet.com,2023-02-12,loans,us,1.0,0.0,False
+online loan application,1,nerdwallet.com,2023-02-19,loans,us,1.0,0.0,False
+rosetta stone alternative,1,babbel.com,2023-01-01,language_learning,us,,,False
+rosetta stone alternative,5,italki.com,2023-01-08,language_learning,us,1.0,-4.0,True
+rosetta stone alternative,6,lingoda.com,2023-01-15,language_learning,us,5.0,-1.0,False
+rosetta stone alternative,10,duolingo.com,2023-01-22,language_learning,us,6.0,-4.0,True
+rosetta stone alternative,8,clozemaster.com,2023-01-29,language_learning,us,10.0,2.0,False
+rosetta stone alternative,6,lingoda.com,2023-02-05,language_learning,us,8.0,2.0,False
+rosetta stone alternative,9,lingvist.com,2023-02-12,language_learning,us,6.0,-3.0,False
+rosetta stone alternative,9,lingvist.com,2023-02-19,language_learning,us,9.0,0.0,False

@@ -1,0 +1,271 @@
+{
+  "name": "SEO Intelligence Hub — Competitive Analysis Scheduler",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 3
+            }
+          ]
+        }
+      },
+      "id": "node-schedule-trigger",
+      "name": "Every 3 Days",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://raw.githubusercontent.com/your-repo/seo-hub/main/keywords_watchlist.json",
+        "options": {}
+      },
+      "id": "node-load-keywords",
+      "name": "Load Keyword Watchlist",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [460, 300],
+      "notes": "In production: replace with Google Sheets or Airtable fetch. For demo: fetch from a static JSON with the keywords to monitor."
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "node-split-keywords",
+      "name": "Split Keywords",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [680, 300],
+      "notes": "Process one keyword at a time to respect SerpApi rate limits."
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://serpapi.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "engine",
+              "value": "google"
+            },
+            {
+              "name": "q",
+              "value": "={{ $json.keyword }}"
+            },
+            {
+              "name": "num",
+              "value": "10"
+            },
+            {
+              "name": "api_key",
+              "value": "={{ $env.SERP_API_KEY }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "node-serp-api",
+      "name": "Fetch SERP Results",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [900, 300],
+      "notes": "Calls SerpApi for each keyword. Free tier: 100 searches/month. Results include top-10 organic URLs, titles, snippets."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract top-10 organic results and prepare for analysis\nconst serpData = $input.first().json;\nconst keyword = $('Split Keywords').first().json.keyword;\n\nconst organicResults = (serpData.organic_results || []).slice(0, 10).map((r, i) => ({\n  position: r.position || i + 1,\n  title: r.title || '',\n  url: r.link || '',\n  domain: (r.displayed_link || '').split('/')[0],\n  snippet: r.snippet || ''\n}));\n\nreturn [{\n  json: {\n    keyword,\n    timestamp: new Date().toISOString(),\n    results_count: organicResults.length,\n    competitors: organicResults,\n    competitors_summary: organicResults.map(r => `${r.position}. ${r.domain}: ${r.title}`).join('\\n')\n  }\n}];"
+      },
+      "id": "node-extract-results",
+      "name": "Extract Competitor Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $env.ANTHROPIC_API_KEY }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "body": {
+          "model": "claude-haiku-4-5-20251001",
+          "max_tokens": 1000,
+          "messages": [
+            {
+              "role": "user",
+              "content": "=You are an SEO analyst. For the keyword \"{{ $json.keyword }}\", analyze these top-10 SERP competitors and identify the 3 most important content gaps:\n\n{{ $json.competitors_summary }}\n\nRespond in 3 bullet points. Be specific and actionable. Base analysis ONLY on the titles and snippets above."
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "node-claude-analysis",
+      "name": "Claude Gap Analysis",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1340, 300],
+      "notes": "Calls Claude Haiku for fast, cost-efficient gap analysis. Each call costs ~$0.001. LangSmith tracing is enabled via the Python agent — n8n calls are also logged separately."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Format the final report for email\nconst analysisResponse = $input.first().json;\nconst keyword = $('Extract Competitor Data').first().json.keyword;\nconst competitors = $('Extract Competitor Data').first().json.competitors;\nconst timestamp = $('Extract Competitor Data').first().json.timestamp;\n\n// Extract Claude's response text\nconst analysisText = analysisResponse?.content?.[0]?.text || 'Analysis unavailable';\n\n// Build competitor table\nconst competitorTable = competitors.map(c =>\n  `<tr><td style=\"padding:4px 8px\">#${c.position}</td><td style=\"padding:4px 8px\">${c.domain}</td><td style=\"padding:4px 8px\">${c.title}</td></tr>`\n).join('');\n\n// Build HTML report\nconst htmlReport = `\n<html><body style=\"font-family: Arial, sans-serif; max-width: 700px; margin: 0 auto;\">\n  <div style=\"background: #1a1a2e; color: white; padding: 20px; border-radius: 8px 8px 0 0;\">\n    <h1 style=\"margin:0; font-size: 20px;\">SEO Competitive Intelligence Report</h1>\n    <p style=\"margin: 5px 0 0; opacity: 0.7;\">Generated: ${new Date(timestamp).toLocaleDateString('en-GB')}</p>\n  </div>\n  <div style=\"padding: 20px; background: #f9f9f9; border: 1px solid #ddd;\">\n    <h2 style=\"color: #1a1a2e;\">Keyword: \"${keyword}\"</h2>\n    <h3 style=\"color: #e74c3c;\">🎯 Content Gap Analysis</h3>\n    <div style=\"background: white; padding: 15px; border-left: 4px solid #e74c3c; border-radius: 4px;\">\n      ${analysisText.replace(/\\n/g, '<br>')}\n    </div>\n    <h3 style=\"color: #2c3e50;\">Top-10 SERP Competitors</h3>\n    <table style=\"width: 100%; border-collapse: collapse; background: white;\">\n      <tr style=\"background: #2c3e50; color: white;\">\n        <th style=\"padding: 8px;\">Pos</th>\n        <th style=\"padding: 8px;\">Domain</th>\n        <th style=\"padding: 8px;\">Title</th>\n      </tr>\n      ${competitorTable}\n    </table>\n    <p style=\"color: #7f8c8d; font-size: 12px; margin-top: 20px;\">\n      This report is automatically generated by SEO Intelligence Hub.<br>\n      Every AI call is logged and monitored in LangSmith for transparency.\n    </p>\n  </div>\n</body></html>`;\n\nreturn [{\n  json: {\n    keyword,\n    timestamp,\n    subject: `SEO Report: \"${keyword}\" — ${competitors.length} competitors analyzed`,\n    html_report: htmlReport,\n    analysis_text: analysisText\n  }\n}];"
+      },
+      "id": "node-format-report",
+      "name": "Format HTML Report",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1560, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "reports@your-agency.com",
+        "toEmail": "={{ $env.REPORT_RECIPIENT_EMAIL }}",
+        "subject": "={{ $json.subject }}",
+        "emailType": "html",
+        "html": "={{ $json.html_report }}",
+        "options": {}
+      },
+      "id": "node-send-email",
+      "name": "Send Email Report",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [1780, 300],
+      "notes": "Uses SendGrid (free tier: 100 emails/day). Configure credentials in n8n Credentials → SendGrid API."
+    },
+    {
+      "parameters": {
+        "channel": "={{ $env.SLACK_CHANNEL_ID }}",
+        "text": "=📊 *SEO Report Ready*\n\n*Keyword:* {{ $json.keyword }}\n*Competitors analyzed:* 10\n*Date:* {{ $json.timestamp.split('T')[0] }}\n\n*Top Gap Identified:*\n{{ $json.analysis_text.split('\\n')[0] }}\n\n_Full report sent via email_ ✉️",
+        "otherOptions": {}
+      },
+      "id": "node-slack-notification",
+      "name": "Slack Notification",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.1,
+      "position": [1780, 480],
+      "notes": "Optional: sends a Slack summary to the team channel when each report is ready."
+    }
+  ],
+  "connections": {
+    "Every 3 Days": {
+      "main": [
+        [
+          {
+            "node": "Load Keyword Watchlist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load Keyword Watchlist": {
+      "main": [
+        [
+          {
+            "node": "Split Keywords",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Keywords": {
+      "main": [
+        [
+          {
+            "node": "Fetch SERP Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch SERP Results": {
+      "main": [
+        [
+          {
+            "node": "Extract Competitor Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Competitor Data": {
+      "main": [
+        [
+          {
+            "node": "Claude Gap Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude Gap Analysis": {
+      "main": [
+        [
+          {
+            "node": "Format HTML Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format HTML Report": {
+      "main": [
+        [
+          {
+            "node": "Send Email Report",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": null,
+  "tags": ["seo", "automation", "competitive-intelligence"],
+  "triggerCount": 1,
+  "versionId": "1.0.0"
+}
